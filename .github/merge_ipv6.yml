@@ -1,0 +1,54 @@
+name: Update m3u
+
+on:
+  schedule:
+    - cron: "0 */1 * * *"
+
+jobs:
+  update-m3u:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Update ycl.m3u
+        run: |
+          # 下载远程文件
+          wget "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u" -O "IPTV.m3u"
+
+          # 删除自第一个 group-title="国际" 到文件末尾的所有内容
+          sed -i '/group-title="国际"/,$d' "IPTV.m3u"
+
+          # 替换 group-title
+          sed -i 's/group-title="[^"]*"/group-title="央视频道"/g' "IPTV.m3u"
+
+          # 比较临时文件和 ycl.m3u
+          if ! cmp -s "IPTV.m3u" "ycl.m3u"; then
+              # 覆盖 ycl.m3u
+              cp "IPTV.m3u" "ycl.m3u"
+
+              # 提交更改到 Git
+              git add "ycl.m3u"
+              git commit -m "Update group-title to 央视频道 in ycl.m3u"
+              git push
+          fi
+
+      - name: Update fmml.m3u
+        run: |
+          # 下载远程文件
+          wget "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6Plus.m3u" -O "ipv6Plus.m3u"
+
+          # 替换 group-title
+          sed -i 's/group-title="[^"]*"/group-title="央视频道"/g' "ipv6Plus.m3u"
+
+          # 比较临时文件和 fmml.m3u
+          if ! cmp -s "ipv6Plus.m3u" "fmml.m3u"; then
+              # 覆盖 fmml.m3u
+              cp "ipv6Plus.m3u" "fmml.m3u"
+
+              # 提交更改到 Git
+              git add "fmml.m3u"
+              git commit -m "Update group-title to 央视频道 in fmml.m3u"
+              git push
+          fi
+
