@@ -12,6 +12,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # 设置 Git 用户信息
+      - name: Set Git user
+        run: |
+          git config user.email "congyong@163.com"
+          git config user.name "mars”
+
       - name: Update ycl.m3u
         run: |
           # 下载远程文件
