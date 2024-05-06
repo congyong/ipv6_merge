@@ -14,7 +14,7 @@ jobs:
         uses: Yikun/hub-mirror-action@master
         with:
           src: 'github/congyong'    						# 这里改为自己github账号名称，如github/xiaoming
-          dst: 'gitee/mars'     						# 这里改为gitee上账号名称，如gitee/xiaoming
+          dst: 'gitee/marspiapia'     						# 这里改为gitee上账号名称，如gitee/xiaoming
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}  	# 这是生成的私钥，下面第3步会讲
           dst_token:  ${{ secrets.GITEE_TOKEN }}     	# 这是gitee上生成的token，下面会讲
           force_update: true
