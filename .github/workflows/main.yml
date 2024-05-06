@@ -15,8 +15,8 @@ jobs:
       # 设置 Git 用户信息
       - name: Set Git user
         run: |
-          git config user.email "congyong@163.com"
-          git config user.name "cc"
+          git config --global user.email "congyong@163.com"
+          git config --global user.name "cc"
 
       - name: Update ycl.m3u
         run: |
@@ -58,3 +58,8 @@ jobs:
               git commit -m "Update group-title to 央视频道 in fmml.m3u"
               git push
           fi
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
