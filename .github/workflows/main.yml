@@ -16,7 +16,7 @@ jobs:
       - name: Set Git user
         run: |
           git config user.email "congyong@163.com"
-          git config user.name "mars”
+          git config user.name "cc"
 
       - name: Update ycl.m3u
         run: |
