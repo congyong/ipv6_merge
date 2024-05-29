@@ -107,6 +107,8 @@ http://[2409:8087:5e00:24::1e]:6060/200000001898/460000089800010098/1.m3u8
 http://[2409:8087:5e00:24::1e]:6060/200000001898/460000089800010111/1.m3u8
 #EXTINF:-1 tvg-id="三沙卫视" tvg-name="三沙卫视" tvg-logo="https://epg.112114.xyz/logo/三沙卫视.png" group-title="央视频道",三沙卫视
 http://[2409:8087:5e01:34::21]:6610/ZTE_CMS/08984400000000060000000000000319/index.m3u8?IAS
+#EXTINF:-1 tvg-logo="https://live.fanmingming.com/tv/海峡卫视.png" group-title="央视频道",海峡卫视
+http://frp-fly.top:27209/proxy/1400186150/1400186150.m3u8
 #EXTINF:-1 tvg-id="纪实科教" tvg-name="纪实科教" tvg-logo="https://live.fanmingming.com/tv/北京纪实科教.png" group-title="央视频道",纪实科教
 http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225729/index.m3u8
 #EXTINF:-1 tvg-id="卡酷动画" tvg-name="卡酷动画" tvg-logo="https://live.fanmingming.com/tv/卡酷少儿.png" group-title="央视频道",卡酷少儿
@@ -205,8 +207,6 @@ http://frp-fly.top:27209/proxy/639164858/639164858.m3u8
 http://frp-fly.top:27209/proxy/199601741/199601741.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.com/tv/福建经济.png" group-title="央视频道",福建经济
 http://frp-fly.top:27209/proxy/561753807/561753807.m3u8
-#EXTINF:-1 tvg-logo="https://live.fanmingming.com/tv/海峡卫视.png" group-title="央视频道",海峡卫视
-http://frp-fly.top:27209/proxy/1400186150/1400186150.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.com/tv/河南国际.png" group-title="央视频道",河南国际
 http://frp-fly.top:27209/proxy/114531055/114531055.m3u8
 #EXTINF:-1 tvg-logo="https://live.fanmingming.com/tv/武术世界.png" group-title="央视频道",河南武术
