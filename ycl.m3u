@@ -205,6 +205,14 @@ http://[2409:8087:5e01:34::21]:6610/ZTE_CMS/08984400000000060000000000000322/ind
 http://[2409:8087:5e01:34::21]:6610/ZTE_CMS/08984400000000060000000000000323/index.m3u8?IAS
 #EXTINF:-1 tvg-name="海南公共" group-title="央视频道",海南公共
 http://[2409:8087:5e01:34::21]:6610/ZTE_CMS/08984400000000060000000000000382/index.m3u8?IAS
+#EXTINF:-1 group-title="央视频道",冀都新综
+http://pluslive1.sjzntv.cn/xmzh/playlist.m3u8?zhebd
+#EXTINF:-1 group-title="央视频道",冀都娱乐
+http://pluslive1.sjzntv.cn/yule/playlist.m3u8?zhebd
+#EXTINF:-1 group-title="央视频道",冀都生活
+http://pluslive1.sjzntv.cn/shenghuo/playlist.m3u8?zhebd
+#EXTINF:-1 group-title="央视频道",冀都都市
+http://pluslive1.sjzntv.cn/dushi/playlist.m3u8?zhebd
 #EXTINF:-1 tvg-name="内蒙古综合" tvg-logo="https://live.fanmingming.com/tv/内蒙古新闻综合.png" group-title="央视频道",内蒙新闻
 https://livestream-bt.nmtv.cn/nmtv/2316general.m3u8?txSecret=173f71025a2de64458989cfb281a0a37&txTime=771E8800
 #EXTINF:-1 tvg-name="内蒙古经济生活" tvg-logo="https://live.fanmingming.com/tv/内蒙古经济生活.png" group-title="央视频道",内蒙经济
