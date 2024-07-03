@@ -43,7 +43,7 @@ jobs:
       - name: Update fmml.m3u
         run: |
           # 下载远程文件
-          wget "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u" -O "ipv6Plus.m3u"
+          wget "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u" -O "ipv6Plus.m3u"
 
           # 替换 group-title
           sed -i 's/group-title="[^"]*"/group-title="央视频道"/g' "ipv6Plus.m3u"
