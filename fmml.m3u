@@ -139,6 +139,10 @@ http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/
 http://[2409:8087:5e08:24::12]:6610/000000001000/2000000002000000008/index.m3u8?stbId=3&livemode=1&HlsProfileId=&channel-id=hnbblive&Contentid=2000000002000000008&IASHttpSessionId=OTT19019320240419154124000281
 #EXTINF:-1 tvg-name="全纪实" tvg-logo="https://live.fanmingming.com/tv/乐游.png" group-title="央视频道",乐游频道
 http://[2409:8087:5e08:24::12]:6610/000000001000/2000000002000000092/index.m3u8?stbId=3&livemode=1&HlsProfileId=&channel-id=hnbblive&Contentid=2000000002000000092&IASHttpSessionId=OTT19019320240419154124000281
+#EXTINF:-1 tvg-name="欢笑剧场" tvg-logo="https://live.fanmingming.com/tv/欢笑剧场.png" group-title="央视频道",欢笑剧场
+http://[2409:8087:5e00:24::1e]:6060/000000001000/5000000002000009455/1.m3u8
+#EXTINF:-1 tvg-name="都市剧场" tvg-logo="https://live.fanmingming.com/tv/都市剧场.png" group-title="央视频道",都市剧场
+http://[2409:8087:5e00:24::1e]:6060/000000001000/5000000011000031111/1.m3u8
 #EXTINF:-1 tvg-name="卡酷动画" tvg-logo="https://live.fanmingming.com/tv/卡酷少儿.png" group-title="央视频道",卡酷少儿
 http://[2409:8087:1a0b:df::4020]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225654/index.m3u8
 #EXTINF:-1 tvg-name="金鹰卡通" tvg-logo="https://live.fanmingming.com/tv/金鹰卡通.png" group-title="央视频道",金鹰卡通
@@ -149,6 +153,12 @@ http://[2409:8087:5e00:24::1e]:6060/000000001000/5000000011000031203/1.m3u8
 http://[2409:8087:5e00:24::1e]:6060/000000001000/5000000011000031206/1.m3u8
 #EXTINF:-1 tvg-name="茶" tvg-logo="https://live.fanmingming.com/tv/茶.png" group-title="央视频道",茶友频道
 http://[2409:8087:5e00:24::1e]:6060/000000001000/5000000011000031209/1.m3u8
+#EXTINF:-1 tvg-name="游戏风云" tvg-logo="https://live.fanmingming.com/tv/游戏风云.png" group-title="央视频道",游戏风云
+http://[2409:8087:5e00:24::1e]:6060/000000001000/5000000011000031114/1.m3u8
+#EXTINF:-1 tvg-name="动漫秀场" tvg-logo="https://live.fanmingming.com/tv/动漫秀场.png" group-title="央视频道",动漫秀场
+http://[2409:8087:5e00:24::1e]:6060/000000001000/5000000011000031113/1.m3u8
+#EXTINF:-1 tvg-name="嘉佳卡通" tvg-logo="https://live.fanmingming.com/tv/嘉佳卡通.png" group-title="央视频道",嘉佳卡通
+http://[2409:8087:5e00:24::1e]:6060/000000001000/1000000002000025964/1.m3u8
 #EXTINF:-1 tvg-name="哒啵赛事" tvg-logo="https://live.fanmingming.com/tv/哒啵赛事.png" group-title="央视频道",哒啵赛事
 http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225675/index.m3u8
 #EXTINF:-1 tvg-name="哒啵电竞" tvg-logo="https://live.fanmingming.com/tv/哒啵电竞.png" group-title="央视频道",哒啵电竞
