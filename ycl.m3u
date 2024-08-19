@@ -103,10 +103,6 @@ rtp://239.3.1.243:8000
 rtp://239.3.1.115:8000
 #EXTINF:-1 tvg-id="卡酷少儿" tvg-name="卡酷少儿" tvg-logo="https://live.fanmingming.com/tv/卡酷少儿.png" group-title="央视频道",卡酷少儿
 rtp://239.3.1.189:8000
-#EXTINF:-1 tvg-id="爱上4K" tvg-name="爱上4K" tvg-logo="https://live.fanmingming.com/tv/爱上4K.png" group-title="央视频道",爱上4K
-rtp://239.3.1.236:2000
-#EXTINF:-1 tvg-id="4K超清" tvg-name="4K超清" tvg-logo="https://live.fanmingming.com/tv/华数4K.png" group-title="央视频道",4K超清
-rtp://239.3.1.249:8001
 #EXTINF:-1 tvg-id="金鹰纪实" tvg-name="金鹰纪实" tvg-logo="https://live.fanmingming.com/tv/金鹰纪实.png" group-title="央视频道",金鹰纪实
 rtp://239.3.1.58:8156
 #EXTINF:-1 tvg-id="1988" tvg-name="上海纪实" tvg-logo="https://live.fanmingming.com/tv/纪实人文.png" group-title="央视频道",纪实人文
