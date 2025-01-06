@@ -4,7 +4,7 @@ on: [ push, delete, create ]
 
 jobs:
   sync-to-gitee:
-    runs-on: ubuntu - latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
