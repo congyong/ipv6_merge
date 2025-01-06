@@ -1,8 +1,6 @@
 name: Sync to Gitee
-on:
-  push:
-    branches:
-      - main # 这里假设你的主分支是main，可根据实际情况修改
+
+on: [ push, delete, create ]
 
 jobs:
   sync-to-gitee:
