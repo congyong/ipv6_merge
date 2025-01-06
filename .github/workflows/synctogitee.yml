@@ -18,7 +18,7 @@ jobs:
         run: |
           #git remote add gitee https://${{ secrets.GITEE_TOKEN }}@gitee.com/marspiapia/my_ipv6.git
           # 下面这句替换原来的git remote add gitee 语句
-           git remote add gitee https://marspiapia:${{ secrets.GITEE_TOKEN }}@gitee.com/marspiapia/test_ipv6.git
+           git remote add gitee https://marspiapia:${{ secrets.GITEE_TOKEN }}@gitee.com/marspiapia/my_ipv6.git
       - name: Push to Gitee
         env:
           GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
