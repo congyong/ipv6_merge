@@ -1,18 +1,27 @@
-name: Sync To Gitee
-
-on: [ push, delete, create ]
+name: Sync to Gitee
+on:
+  push:
+    branches:
+      - main # 这里假设你的主分支是main，可根据实际情况修改
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  sync-to-gitee:
+    runs-on: ubuntu - latest
     steps:
-      - name: Sync to Gitee
-        uses: wearerequired/git-mirror-action@master
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Configure Git
+        run: |
+          git config --global user.name 'congyong'
+          git config --global user.email 'congyong@example.com'
+      - name: Add Gitee remote
         env:
-          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
-        with:
-          # 注意替换为你的 GitHub 源仓库地址https://github.com/congyong/ipv6_merge.git
-          source-repo: git@github.com:congyong/ipv6_merge.git
-          # 注意替换为你的 Gitee 目标仓库地址
-          destination-repo: git@gitee.com:marspiapia/my_ipv6.git
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+        run: |
+          git remote add gitee https://${{ secrets.GITEE_TOKEN }}@gitee.com/marspiapia/my_ipv6.git
+      - name: Push to Gitee
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+        run: |
+          git push -u gitee main:main --force
+。
