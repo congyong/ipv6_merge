@@ -24,4 +24,3 @@ jobs:
           GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
         run: |
           git push -u gitee main:main --force
-。
