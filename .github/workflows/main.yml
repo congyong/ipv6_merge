@@ -61,14 +61,21 @@ jobs:
 
       - name: Update Gather.m3u
         run: |
-          wget "https://raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Gather.m3u" -O "temp_Gather.m3u"
-          sed -i 's/group-title=".*IPV6.*"/group-title="我的IPV6"/' "temp_Gather.m3u"
-          if! cmp -s "temp_Gather.m3u" "Gather_mg.m3u"; then
-            cp "temp_Gather.m3u" "Gather_mg.m3u"
-            git add "Gather_mg.m3u"
-            git commit -m "Update Gather_mg.m3u"
-            git push
-          fi
+            wget "https://raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Gather.m3u" -O "temp_Gather.m3u"
+            sed -i 's/group-title=".*IPV6.*"/group-title="我的IPV6"/' "temp_Gather.m3u"
+            if [ -f "Gather_mg.m3u" ]; then
+              if! cmp -s "temp_Gather.m3u" "Gather_mg.m3u"; then
+                cp "temp_Gather.m3u" "Gather_mg.m3u"
+                git add "Gather_mg.m3u"
+                git commit -m "Update Gather_mg.m3u"
+                git push
+              fi
+            else
+              cp "temp_Gather.m3u" "Gather_mg.m3u"
+              git add "Gather_mg.m3u"
+              git commit -m "Create Gather_mg.m3u"
+              git push
+            fi
           
       - name: Pull and Push Original Gather.m3u
         run: |
