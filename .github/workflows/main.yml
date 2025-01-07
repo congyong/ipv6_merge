@@ -80,7 +80,7 @@ jobs:
       - name: Pull and Push Original Gather.m3u
         run: |
           wget https://raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Gather.m3u -O "local_Gather.m3u"
-          if! cmp -s "local_Gather.m3u" "Gather.m3u"; then
+          if ! cmp -s "local_Gather.m3u" "Gather.m3u"; then
             cp "local_Gather.m3u" "Gather.m3u"
             git add "Gather.m3u"
             git commit -m "Pull and update original Gather.m3u"
