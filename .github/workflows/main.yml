@@ -58,7 +58,26 @@ jobs:
               git commit -m "Update group-title to 央视频道 in fmml.m3u"
               git push
           fi
-          
+
+      - name: Update Gather.m3u
+        run: |
+          wget https://raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Gather.m3u -O temp_Gather.m3u
+          sed -i '/group-title=/ { /IPV6/!d; s/group-title=".*"/group-title="我的IPV6"/; }' temp_Gather.m3u
+          if! cmp -s temp_Gather.m3u Gather_mg.m3u; then
+            cp temp_Gather.m3u Gather_mg.m3u
+            git add Gather_mg.m3u
+            git commit -m "Update Gather_mg.m3u"
+          fi
+
+      - name: Pull and Push Original Gather.m3u
+        run: |
+          wget https://raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Gather.m3u -O local_Gather.m3u
+          if! cmp -s local_Gather.m3u Gather.m3u; then
+            cp local_Gather.m3u Gather.m3u
+            git add Gather.m3u
+            git commit -m "Pull and update original Gather.m3u"
+          fi
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
