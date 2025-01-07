@@ -62,10 +62,7 @@ jobs:
       - name: Update Gather.m3u
         run: |
           wget https://raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Gather.m3u -O temp_Gather.m3u
-          # 第一个sed：删除有group-title但不含IPV6的行
-          sed -i '/group-title="[^"]*"/ { /IPV6/!d; }' temp_Gather.m3u
-          # 第二个sed：修改group-title
-          sed -i 's/group-title=".*"/group-title="我的IPV6"/' temp_Gather.m3u
+          sed -i 's/group-title=".*IPV6.*"/group-title="我的IPV6"/' temp_Gather.m3u
           if! cmp -s temp_Gather.m3u Gather_mg.m3u; then
             cp temp_Gather.m3u Gather_mg.m3u
             git add Gather_mg.m3u
