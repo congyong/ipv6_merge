@@ -21,7 +21,7 @@ jobs:
       - name: Update ycl.m3u
         run: |
           # 下载远程文件
-          wget "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u" -O "IPTV.m3u"
+          wget "https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/APTV.m3u" -O "IPTV.m3u"
 
           # 删除自第一个 group-title="国际" 到文件末尾的所有内容
           sed -i '/group-title="国际"/,$d' "IPTV.m3u"
@@ -43,7 +43,7 @@ jobs:
       - name: Update fmml.m3u
         run: |
           # 下载远程文件
-          wget "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u" -O "ipv6Plus.m3u"
+          wget "https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u" -O "ipv6Plus.m3u"
 
           # 替换 group-title
           sed -i 's/group-title="[^"]*"/group-title="央视频道"/g' "ipv6Plus.m3u"
