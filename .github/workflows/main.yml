@@ -87,6 +87,27 @@ jobs:
             git push
           fi
 
+
+      - name: Update yuanzl77's live.m3u
+        run: |
+          wget "https://raw.githubusercontent.com/yuanzl77/IPTV/refs/heads/main/live.m3u" -O "temp_yuanzl77.m3u"
+          sed -i '/group - title="公告"/,+1d' "temp_yuanzl77.m3u"
+          sed -i 's/group - title=".*"/group - title="IPTV"/g' "temp_yuanzl77.m3u"
+          if [ -f "yuanzl77.m3u" ]; then
+            if ! cmp -s "temp_yuanzl77.m3u" "yuanzl77.m3u"; then
+              cp "temp_yuanzl77.m3u" "yuanzl77.m3u"
+              git add "yuanzl77.m3u"
+              git commit -m "Update yuanzl77.m3u"
+              git push
+            fi
+          else
+            cp "temp_yuanzl77.m3u" "yuanzl77.m3u"
+            git add "yuanzl77.m3u"
+            git commit -m "Create yuanzl77.m3u"
+            git push
+          fi
+  
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
