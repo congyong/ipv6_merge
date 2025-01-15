@@ -88,11 +88,11 @@ jobs:
           fi
 
 
-      - name: Update yuanzl77's live.m3u
+      - name: Update yuanzl77 live.m3u
         run: |
           wget "https://raw.githubusercontent.com/yuanzl77/IPTV/refs/heads/main/live.m3u" -O "temp_yuanzl77.m3u"
-          sed -i '/group - title="公告"/,+1d' "temp_yuanzl77.m3u"
-          sed -i 's/group - title=".*"/group - title="IPTV"/g' "temp_yuanzl77.m3u"
+          sed -i '/group-title="公告"/,+1d' "temp_yuanzl77.m3u"
+          sed -i 's/group-title="[^"]*"/group-title="IPTV"/g' "temp_yuanzl77.m3u"
           if [ -f "yuanzl77.m3u" ]; then
             if ! cmp -s "temp_yuanzl77.m3u" "yuanzl77.m3u"; then
               cp "temp_yuanzl77.m3u" "yuanzl77.m3u"
