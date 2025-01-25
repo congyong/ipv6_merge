@@ -1,5 +1,10 @@
 name: Sync to Gitee
-on: [ push, delete, create ]
+on: 
+  push:
+    branches:
+      -main
+  schedule:
+    - cron: '0 0 * * *' # 每天凌晨0点0分触发
 jobs:
   sync-to-gitee:
     runs-on: ubuntu-latest
