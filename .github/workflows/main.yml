@@ -62,15 +62,15 @@ jobs:
       - name: Update kilvn.m3u
         run: |
           # 下载远程文件
-          wget "https://live.kilvn.com/iptv.m3u" -O "ipv6Plus.m3u"
+          wget "https://live.kilvn.com/iptv.m3u" -O "ktmp.m3u"
 
           # 替换 group-title
-          sed -i 's/group-title="卫视频道"/group-title="央视频道"/g' "ipv6Plus.m3u"
+          sed -i 's/group-title="卫视频道"/group-title="央视频道"/g' "ktmp.m3u"
 
           # 比较临时文件和 fmml.m3u
-          if ! cmp -s "ipv6Plus.m3u" "kilvn.m3u"; then
+          if ! cmp -s "ktmp.m3u" "kilvn.m3u"; then
               # 覆盖 fmml.m3u
-              cp "ipv6Plus.m3u" "kilvn.m3u"
+              cp "ktmp.m3u" "kilvn.m3u"
 
               # 提交更改到 Git
               git add "kilvn.m3u"
