@@ -59,6 +59,26 @@ jobs:
               git push
           fi
 
+      - name: Update kilvn.m3u
+        run: |
+          # 下载远程文件
+          wget "https://live.kilvn.com/iptv.m3u" -O "ipv6Plus.m3u"
+
+          # 替换 group-title
+          sed -i 's/group-title="卫视频道"/group-title="央视频道"/g' "ipv6Plus.m3u"
+
+          # 比较临时文件和 fmml.m3u
+          if ! cmp -s "ipv6Plus.m3u" "kilvn.m3u"; then
+              # 覆盖 fmml.m3u
+              cp "ipv6Plus.m3u" "kilvn.m3u"
+
+              # 提交更改到 Git
+              git add "kilvn.m3u"
+              git commit -m "Update group-title to 央视频道 in kilvn.m3u"
+              git push
+          fi
+
+
       - name: Update Gather.m3u
         run: |
             wget "https://raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Gather.m3u" -O "temp_Gather.m3u"
