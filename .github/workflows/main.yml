@@ -62,7 +62,7 @@ jobs:
       - name: Update kilvn.m3u
         run: |
           # 下载远程文件
-          wget "https://live.kilvn.com/iptv.m3u" -O "ktmp.m3u"
+          wget "https://raw.githubusercontent.com/kilvn/iptv/refs/heads/master/iptv.m3u" -O "ktmp.m3u"
 
           # 替换 group-title
           sed -i 's/group-title="卫视频道"/group-title="央视频道"/g' "ktmp.m3u"
