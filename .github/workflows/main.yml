@@ -2,7 +2,7 @@ name: Update m3u
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+#    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
