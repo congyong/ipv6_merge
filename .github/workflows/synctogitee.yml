@@ -4,7 +4,7 @@ on:
     branches:
       -main
   schedule:
-    - cron: '0 0 * * *' # 每天凌晨0点0分触发
+#    - cron: '0 0 * * *' # 每天凌晨0点0分触发
 jobs:
   sync-to-gitee:
     runs-on: ubuntu-latest
